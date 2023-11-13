@@ -1,0 +1,20 @@
+# index
+GET http://localhost:3333/service
+
+###
+
+
+# create
+
+POST http://localhost:3333/service
+Content-Type: application/json
+
+{
+  "name": "20231113 servico"
+  , "description": "20231113 descricao"
+  , "price": 113
+  , "image": "https://unplash.com/photos/-Wi2owaQcH8"
+}
+
+# created: 655276736dc93a2710ef4579
+###

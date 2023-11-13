@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { StatusCodes } from "http-status-codes";
 import Service from "../../models/Service";
 
 
@@ -28,7 +29,14 @@ const ServiceControllers = {
        try {
            const listServices = await Service.find();
 
-           return ( res.status(200).send( {msg: `Lista de serviços ${listServices} `} ) );
+        //    return ( res.status(200).send( {msg: `Lista de serviços ${listServices} `} ) );
+
+            return(
+                res
+                .status( StatusCodes.OK )
+                .send  ( `{ message: List :: Services :: ${ listServices } }` )
+            );
+  
 
        } catch ( error ) {
            return ( res.status( 404 ).send( {msg: `:: Erro ao pesquisar seviços :: ${ error }` } ) )
