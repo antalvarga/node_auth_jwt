@@ -5,7 +5,6 @@ GET http://localhost:3333/service
 
 
 # create
-
 POST http://localhost:3333/service
 Content-Type: application/json
 
@@ -18,3 +17,26 @@ Content-Type: application/json
 
 # created: 655276736dc93a2710ef4579
 ###
+
+# GetAll - Usando a controller nova
+GET http://localhost:3333/serv
+
+###
+
+# create - Usando a controller nova
+POST http://localhost:3333/serv
+Content-Type: application/json
+
+{
+  "name": "20231113 servico usando controllerNew"
+  , "description": "20231113 descricao usando controllerNew"
+  , "price": 113.1
+  , "image": "https://unplash.com/photos/-Wi2owaQcH8"
+}
+
+# created: 6552a87ee84bc1e6ee0eed97
+
+###
+
+
+
