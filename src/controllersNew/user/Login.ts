@@ -50,7 +50,7 @@ const Login = async( req: Request, res: Response ) => {
 
   // 55:07 - Efetivar a autenticação
   try {
-
+    // todo : Criar função para retorar Secret
     const secret = process.env.SECRET ? process.env.SECRET : 'NUMSEY!1234$NANAMBRIUNVALA' ;
 
     const token  = jwt.sign({
