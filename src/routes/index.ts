@@ -1,6 +1,9 @@
 import { Router } from 'express';
+
 import ServiceControllers from '../controllers/Service';
 import { ServiceControllerNew } from '../controllersNew';
+import { UserControllerNew } from '../controllersNew';
+
 
 const Routes = Router();
 
@@ -15,4 +18,7 @@ Routes.post( '/serv'       , ServiceControllerNew.Create);
 
 
 
+// Register User *** Criar controller ??
+Routes.post( '/auth/register', UserControllerNew.Create );
+Routes.post( '/auth/login'   , UserControllerNew.Login  );
 export default Routes;
